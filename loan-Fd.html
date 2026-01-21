@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Loan & FD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/loan-Fd.css">
+</head>
+
+<body>
+
+<nav>
+<h2>🏦 MyBank</h2>
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="loan-fd.html">Loan / FD</a>
+<a href="index.html" onclick="logout()">Logout</a>
+</div>
+</nav>
+
+<div class="container">
+
+<div class="forms">
+  <div class="box">
+    <h3>Apply Loan</h3>
+    <input type="number" id="loanAmt" placeholder="Loan Amount">
+    <select id="loanMonths">
+      <option value="">Tenure</option>
+      <option value="6">6 Months</option>
+      <option value="12">12 Months</option>
+      <option value="24">24 Months</option>
+    </select>
+    <button onclick="applyLoan()">Apply Loan</button>
+  </div>
+
+  <div class="box">
+    <h3>Create FD</h3>
+    <input type="number" id="fdAmt" placeholder="FD Amount">
+    <select id="fdMonths">
+      <option value="">Tenure</option>
+      <option value="6">6 Months</option>
+      <option value="12">12 Months</option>
+      <option value="24">24 Months</option>
+    </select>
+    <button onclick="applyFD()">Create FD</button>
+  </div>
+</div>
+
+<h3>My Loan / FD Status</h3>
+<table>
+<thead>
+<tr><th>Type</th><th>Amount</th><th>Months</th><th>Status</th></tr>
+</thead>
+<tbody id="myRecords"></tbody>
+</table>
+
+</div>
+
+<!-- LINK JS -->
+<script src="js/loan-Fd.js"></script>
+</body>
+</html>

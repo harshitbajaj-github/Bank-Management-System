@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Statement</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- jsPDF library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/statement.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>🏦 MyBank</h2>
+  <div class="links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="statement.html">Statement</a>
+     <a href="loan-fd.html">Loan / FD</a>
+    <a href="change-password.html">Change Password</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div id="popupMsg"></div>
+  <h1>Account Statement</h1>
+
+  <div class="top-actions">
+    <input type="text" id="searchAcc" placeholder="Search by Account No">
+    <button onclick="searchAccount()">Search</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount (₹)</th>
+        <th>Date & Time</th>
+      </tr>
+    </thead>
+    <tbody id="history"></tbody>
+  </table>
+</div>
+
+<!-- LINK JS -->
+<script src="js/statement.js"></script>
+
+</body>
+</html>

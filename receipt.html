@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Transaction Receipt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/receipt.css">
+</head>
+<body>
+
+<nav>
+  <h2>🏦 MyBank</h2>
+  <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<div class="receipt">
+  <h1>Transaction Receipt</h1>
+  <div class="status">✅ Payment Successful</div>
+
+  <div class="row"><span>Transaction ID</span><span id="txId"></span></div>
+  <div class="row"><span>From Account</span><span id="fromAcc"></span></div>
+  <div class="row"><span>To Account</span><span id="toAcc"></span></div>
+  <div class="row"><span>Amount</span><span>₹ <span id="amount"></span></span></div>
+  <div class="row"><span>Date & Time</span><span id="date"></span></div>
+
+  <div class="btns">
+    <button class="btn home" onclick="goHome()">Go Dashboard</button>
+    <button class="btn print" onclick="window.print()">Print</button>
+  </div>
+</div>
+
+<!-- LINK JS -->
+<script src="js/receipt.js"></script>
+
+</body>
+</html>

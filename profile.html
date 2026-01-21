@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>🏦 MyBank</h2>
+  <div class="links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="statement.html">Statement</a>
+     <a href="loan-fd.html">Loan / FD</a>
+    <a href="change-password.html">Change Password</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div id="popupMsg"></div>
+  <h1>Your Profile</h1>
+
+  <!-- ACCOUNT DETAILS -->
+  <div class="cards">
+    <div class="card">
+      <h4>Full Name</h4>
+      <p id="accName"></p>
+    </div>
+    <div class="card">
+      <h4>Account No</h4>
+      <p id="accNo"></p>
+    </div>
+    <div class="card">
+      <h4>Email</h4>
+      <p id="accEmail"></p>
+    </div>
+    <div class="card">
+      <h4>Balance (₹)</h4>
+      <p id="accBalance"></p>
+    </div>
+  </div>
+
+  <!-- DEPOSIT / WITHDRAW -->
+  <div class="actions">
+    <input type="number" id="amount" placeholder="Enter amount">
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+  </div>
+
+  <!-- TRANSACTION HISTORY -->
+  <h3>Recent Transactions</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount (₹)</th>
+        <th>Date & Time</th>
+      </tr>
+    </thead>
+    <tbody id="history"></tbody>
+  </table>
+</div>
+
+<!-- LINK JS -->
+<script src="js/profile.js"></script>
+
+</body>
+</html>

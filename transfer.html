@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Transfer Funds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/transfer.css">
+</head>
+
+<body>
+
+<nav>
+  <h2>🏦 MyBank</h2>
+  <div class="links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="statement.html">Statement</a>
+     <a href="loan-fd.html">Loan / FD</a>
+    <a href="change-password.html">Change Password</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+<div id="popupMsg"></div>
+<h1>Transfer Funds</h1>
+
+<div class="input-group">
+  <label>Recipient Account Number</label>
+  <input type="text" id="toAccount" placeholder="Enter account no">
+</div>
+
+<div id="recipientName"></div>
+
+<div class="input-group">
+  <label>Amount (₹)</label>
+  <input type="number" id="amount" placeholder="Enter amount">
+</div>
+
+<button class="btn" onclick="transfer()">Send Money</button>
+</div>
+
+<!-- LINK JS -->
+<script src="js/transfer.js"></script>
+
+</body>
+</html>

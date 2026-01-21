@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Admin Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<nav>
+<h2>🏦 MyBank Admin</h2>
+<a href="index.html" onclick="logout()">Logout</a>
+</nav>
+
+<div class="container">
+
+<h2>User Accounts</h2>
+<table>
+<thead>
+<tr><th>#</th><th>Acc No</th><th>Name</th><th>Email</th><th>Balance</th><th>Status</th></tr>
+</thead>
+<tbody id="accTable"></tbody>
+</table>
+
+<h2>Loan Requests</h2>
+<table>
+<thead>
+<tr><th>#</th><th>Acc No</th><th>Name</th><th>Amount</th><th>Status</th><th>Action</th></tr>
+</thead>
+<tbody id="loanTable"></tbody>
+</table>
+
+<h2>FD Requests</h2>
+<table>
+<thead>
+<tr><th>#</th><th>Acc No</th><th>Name</th><th>Amount</th><th>Months</th><th>Status</th><th>Action</th></tr>
+</thead>
+<tbody id="fdTable"></tbody>
+</table>
+</div>
+
+<!-- LINK JS -->
+<script src="js/admin.js"></script>
+
+</body>
+</html>

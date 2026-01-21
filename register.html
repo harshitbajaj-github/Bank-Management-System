@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyBank | Create Account</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+  <h2>🏦 MyBank</h2>
+  <div class="links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="statement.html">Statement</a>
+    <a href="change-password.html">Change Password</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<!-- REGISTER BOX -->
+<div class="register-box">
+  <div id="popupMsg"></div>
+
+  <div class="bank-logo">MyBank</div>
+  <div class="bank-tagline">Open Your Secure Account</div>
+
+  <div class="note">
+    Please enter correct details. This account will be used for all transactions.
+  </div>
+
+  <form id="registerForm">
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="input-group">
+      <label>Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Create password" required>
+    </div>
+
+    <div class="input-group">
+      <label>Opening Balance</label>
+      <input type="number" id="balance" placeholder="Minimum ₹500" min="500" required>
+    </div>
+
+    <button type="submit" class="btn">Create Account</button>
+  </form>
+
+  <div class="links">
+    <a href="index.html">Already have an account? Login</a>
+  </div>
+
+  <div class="footer-text">
+    © 2026 MyBank. Secure & Trusted Banking.
+  </div>
+</div>
+
+<!-- JS -->
+<script src="js/register.js"></script>
+</body>
+</html>
